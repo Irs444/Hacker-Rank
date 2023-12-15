@@ -1,10 +1,8 @@
 const express = require('express');
-const Model = require('../models/userModel');
+const Model = require("../models/TopicModel")
+ const router = express.Router();
 
-
-const router = express.Router();
-
-router.post('/add', (req, res) => {
+ router.post('/add', (req, res) => {
     console.log(req.body);
 
     new Model(req.body).save()
@@ -82,4 +80,9 @@ router.delete('/delete/:id', (req, res) => {
     });
 });
 
-module.exports = router
+
+
+
+
+ module.exports = router
+

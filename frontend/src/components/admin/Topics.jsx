@@ -1,10 +1,16 @@
 import React from 'react'
+import {  useNavigate } from 'react-router-dom'
 
 const Topics = () => {
+    const navigate = useNavigate();
+
+    const nextpage = () => {
+        navigate('/questions')
+    }
   return (
     <div>
         <div className="container">
-            <div className="content ">
+            <div className="content">
             
            <div className="item d-flex justify-content-between my-5">
             <h1>Prepare</h1>
@@ -22,7 +28,7 @@ const Topics = () => {
             </div>
         </div>
         <div className="container">
-            <div className="card" style={{width:"30rem"}}>
+            <div className="card my-3" style={{width:"30rem"}}>
                 <div className="card-header">
                     <p>PREPARE BY TOPIC</p>
                     <h2>Problem Solving</h2>
@@ -30,7 +36,7 @@ const Topics = () => {
                 {/* <hr /> */}
                 <div className="card-body">
                     <p>30% Get to 30 point to unlock this badge</p>
-                    <button className='btn btn-success'>Continue Preparation</button>
+                    <button className='btn btn-success' onClick={nextpage}>Continue Preparation</button>
                 </div>
             </div>
         </div>
@@ -39,7 +45,7 @@ const Topics = () => {
                 <h3>Preparation Kits</h3>
             <div className="row">
                 <div className="col">
-                   <div className="card">
+                   <div className="card" onClick={nextpage}>
                     <div className="card-body">
                         <h3>1 Week Preparation Kit</h3>
                         <span>Challenges:21,Attempt:2344,Mock Test:6</span>
@@ -52,7 +58,7 @@ const Topics = () => {
                    </div>
                 </div>
                 <div className="col">
-                <div className="card">
+                <div className="card " onClick={nextpage}>
                     <div className="card-body">
                         <h3>1 Month Preparation Kit</h3>
                         <span>Challenges:21,Attempt:5433,Mock Test:4</span>
@@ -72,17 +78,17 @@ const Topics = () => {
                 <h2>Prepare By Topic</h2>
             </div>
            
-            <div className="row border p-4 ">
+            <div className="row border p-4 " onClick={nextpage}>
                 <div className="col">Algorith</div>
                 <div className="col">DataStructure</div>
                 <div className="col">Mathematics</div>
             </div>
-            <div className="row border p-4 ">
+            <div className="row border p-4 " onClick={nextpage}>
                 <div className="col">Artificial Intelligence</div>
                 <div className="col">C</div>
                 <div className="col">C++</div>
             </div>
-            <div className="row border p-4 ">
+            <div className="row border p-4 " onClick={nextpage}>
                 <div className="col">Java</div>
                 <div className="col">Python</div>
                 <div className="col">Ruby</div>

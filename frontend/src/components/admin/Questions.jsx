@@ -1,6 +1,14 @@
 import React from 'react'
+import { useNavigate } from 'react-router-dom'
 
 const Questions = () => {
+
+    const navigate = useNavigate();
+    
+    const tryagain = () => {
+       
+        navigate('/solutions')
+    }
   return (
     <div>
         <div className="container my-4">
@@ -39,7 +47,7 @@ const Questions = () => {
                             </div>
                             <div className="item d-flex justify-content-between my-2">
                                 <p>This is an easy challenge to help you start coding in your<br/> favorite languages!</p>
-                                <button className='btn btn-success m-3' >Try Again </button>
+                                <button className='btn btn-success m-3'onClick={tryagain} >Try Again </button>
                             </div>
                         </div>
                     </div>
@@ -58,7 +66,7 @@ const Questions = () => {
                                 <span>Max Score: 10,</span>
                                 <span>Success Rate: 88%</span>
                                 </div>
-                                <button className='btn btn-success me-3'>Try Again</button>
+                                <button className='btn btn-success me-3' onClick={tryagain}>Try Again</button>
                             </div>
                            
                         </div>
@@ -78,7 +86,7 @@ const Questions = () => {
                                 <span>Max Score: 10,</span>
                                 <span>Success Rate: 92.5%</span>
                                 </div>
-                                <button className='btn btn-success me-3'>Try Again</button>
+                                <button className='btn btn-success me-3' onClick={tryagain}>Try Again</button>
                             </div>
                            
                         </div>
@@ -98,7 +106,7 @@ const Questions = () => {
                                 <span>Max Score: 10,</span>
                                 <span>Success Rate: 92.5%</span>
                                 </div>
-                                <button className='btn btn-success me-3'>Try Again</button>
+                                <button className='btn btn-success me-3' onClick={tryagain}>Try Again</button>
                             </div>
                            
                         </div>
@@ -118,7 +126,7 @@ const Questions = () => {
                                 <span>Max Score: 10,</span>
                                 <span>Success Rate: 92.5%</span>
                                 </div>
-                                <button className='btn btn-success me-3'>Try Again</button>
+                                <button className='btn btn-success me-3' onClick={tryagain}>Try Again</button>
                             </div>
                            
                         </div>

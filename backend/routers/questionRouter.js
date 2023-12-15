@@ -1,7 +1,5 @@
-const express = require('express');
-const Model = require('../models/userModel');
-
-
+const express = require("express")
+const Model = require("../models/QuestionModel")
 const router = express.Router();
 
 router.post('/add', (req, res) => {
@@ -81,5 +79,8 @@ router.delete('/delete/:id', (req, res) => {
         res.status(500).json(err);
     });
 });
+
+
+
 
 module.exports = router

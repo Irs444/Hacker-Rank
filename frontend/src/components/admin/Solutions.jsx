@@ -63,7 +63,7 @@ const Solutions = () => {
                                         <option value="">Marathi</option>
                                     </select>
                                 </div>
-                                <div className=" card-body content">
+                                <div className=" card-body cont">
                                     Lorem ipsum dolor sit amet consectetur, adipisicing elit. Distinctio
                                     deleniti culpa quia, ex illum facere sed, similique consectetur
                                     soluta ab suscipit necessitatibus repudiandae assumenda porro?
@@ -124,6 +124,7 @@ const Solutions = () => {
                                     sequi hic minus illo sint.
                                 </div>
                                 <div className="card-footer my-2 ">
+                               
                                     <a href="">UploadeCodeasFile</a>
                                     <input type="checkbox" id="input" className="ms-2" />
                                     <label htmlFor="input">Test against custom input </label>

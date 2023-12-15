@@ -8,6 +8,7 @@ import Questions from './components/admin/Questions'
 
 import Solutions from './components/admin/Solutions'
 import Certificate from './components/admin/Certificate'
+import Navbar1 from './components/admin/Navbar1'
 
 function App() {
   
@@ -16,6 +17,7 @@ function App() {
     <>
      <BrowserRouter>
      {/* <Navbar/> */}
+     <Navbar1/>
      <Routes>
      <Route path='/' element={<Home/>} />
      <Route path='/topics' element={<Topics/>} />
