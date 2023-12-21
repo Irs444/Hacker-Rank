@@ -1,16 +1,22 @@
 import React from 'react'
+import { Link, useNavigate } from 'react-router-dom'
 
 const Certificate = () => {
+
+    const navigate = useNavigate();
+    const nextpage = () => {
+        navigate('/ctest');
+    }
   return (
     <div>
-        <div className="container">
+        <div className="container   ">
             <div className="header my-3">
                 <span>Dasboard</span>
                 <h3 className='fw-bold'>Get Certified</h3>
             </div>
-           
-            <div className=" bg-primary ">
-                <div className="row m-4">
+            </div>
+            <div className=" container  bg-primary text-white ">
+                <div className="row m-4 ">
                     <div className="col-4  ">
                         <div className="header m-5">
                             <h3>Stand out from the crowd</h3>
@@ -33,7 +39,7 @@ const Certificate = () => {
             </div>
           
 
-        </div>
+        
         <div className="container">
             <div className="header">
                 <h4 className='fw-bold'>Get Your Role Certified</h4>
@@ -43,7 +49,7 @@ const Certificate = () => {
                     <div className="card m-4 px-3 h-75 ">
                         <div className="card-body">
                             <h2>Frontend Developer<br/>(React)</h2>
-                            <a href="">View Status</a>
+                            <Link href="" to="/ctest">View Status</Link>
                         </div>
                     </div>
                 </div>
@@ -51,7 +57,7 @@ const Certificate = () => {
                 <div className="card m-4 px-3  h-75">
                         <div className="card-body">
                             <h2 >Software Engineer</h2>
-                           <button className='btn btn-light fw-medium '>Get Certified</button>
+                           <button className='btn btn-light fw-medium ' onClick={nextpage}>Get Certified</button>
                         </div> 
                     </div>
                 </div>
@@ -59,7 +65,7 @@ const Certificate = () => {
                 <div className="card m-4 px-3 h-75">
                         <div className="card-body  ">
                             <h2>Software Engineer<br/>(Intern)</h2>
-                            <button className='btn btn-light fw-medium'>Get Certified</button>
+                            <button className='btn btn-light fw-medium' onClick={nextpage}>Get Certified</button>
                         </div>
                     </div>
                 </div>
@@ -74,7 +80,7 @@ const Certificate = () => {
                 <div className="card m-4 px-3  h-75">
                         <div className="card-body">
                             <h2 >Software Engineer</h2>
-                           <button className='btn btn-light fw-medium '>Get Certified</button>
+                           <button className='btn btn-light fw-medium ' onClick={nextpage}>Get Certified</button>
                         </div> 
                     </div>
                 </div>
@@ -82,7 +88,7 @@ const Certificate = () => {
                 <div className="card m-4 px-3  h-75">
                         <div className="card-body">
                             <h2 >Software Engineer</h2>
-                           <button className='btn btn-light fw-medium '>Get Certified</button>
+                           <button className='btn btn-light fw-medium ' onClick={nextpage}>Get Certified</button>
                         </div> 
                     </div>
                 </div>
@@ -90,33 +96,7 @@ const Certificate = () => {
                 <div className="card m-4 px-3  h-75">
                         <div className="card-body">
                             <h2 >Software Engineer</h2>
-                           <button className='btn btn-light fw-medium '>Get Certified</button>
-                        </div> 
-                    </div>
-                </div>
-            </div>
-            <div className="row">
-                <div className="col-4">
-                <div className="card m-4 px-3  h-75">
-                        <div className="card-body">
-                            <h2 >Software Engineer</h2>
-                           <button className='btn btn-light fw-medium '>Get Certified</button>
-                        </div> 
-                    </div>
-                </div>
-                <div className="col-4">
-                <div className="card m-4 px-3  h-75">
-                        <div className="card-body">
-                            <h2 >Software Engineer</h2>
-                           <button className='btn btn-light fw-medium '>Get Certified</button>
-                        </div> 
-                    </div>
-                </div>
-                <div className="col-4">
-                <div className="card m-4 px-3  h-75">
-                        <div className="card-body">
-                            <h2 >Software Engineer</h2>
-                           <button className='btn btn-light fw-medium '>Get Certified</button>
+                           <button className='btn btn-light fw-medium ' onClick={nextpage}>Get Certified</button>
                         </div> 
                     </div>
                 </div>
@@ -126,7 +106,7 @@ const Certificate = () => {
                 <div className="card m-4 px-3  h-75">
                         <div className="card-body">
                             <h2 >Software Engineer</h2>
-                           <button className='btn btn-light fw-medium '>Get Certified</button>
+                           <button className='btn btn-light fw-medium ' onClick={nextpage}>Get Certified</button>
                         </div> 
                     </div>
                 </div>
@@ -134,7 +114,7 @@ const Certificate = () => {
                 <div className="card m-4 px-3  h-75">
                         <div className="card-body">
                             <h2 >Software Engineer</h2>
-                           <button className='btn btn-light fw-medium '>Get Certified</button>
+                           <button className='btn btn-light fw-medium ' onClick={nextpage}>Get Certified</button>
                         </div> 
                     </div>
                 </div>
@@ -142,7 +122,33 @@ const Certificate = () => {
                 <div className="card m-4 px-3  h-75">
                         <div className="card-body">
                             <h2 >Software Engineer</h2>
-                           <button className='btn btn-light fw-medium '>Get Certified</button>
+                           <button className='btn btn-light fw-medium ' onClick={nextpage}>Get Certified</button>
+                        </div> 
+                    </div>
+                </div>
+            </div>
+            <div className="row">
+                <div className="col-4">
+                <div className="card m-4 px-3  h-75">
+                        <div className="card-body">
+                            <h2 >Software Engineer</h2>
+                           <button className='btn btn-light fw-medium ' onClick={nextpage}>Get Certified</button>
+                        </div> 
+                    </div>
+                </div>
+                <div className="col-4">
+                <div className="card m-4 px-3  h-75">
+                        <div className="card-body">
+                            <h2 >Software Engineer</h2>
+                           <button className='btn btn-light fw-medium ' onClick={nextpage}>Get Certified</button>
+                        </div> 
+                    </div>
+                </div>
+                <div className="col-4">
+                <div className="card m-4 px-3  h-75">
+                        <div className="card-body">
+                            <h2 >Software Engineer</h2>
+                           <button className='btn btn-light fw-medium ' onClick={nextpage}>Get Certified</button>
                         </div> 
                     </div>
                 </div>

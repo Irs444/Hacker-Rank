@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 const Navbar = () => {
     return (
@@ -33,32 +34,32 @@ const Navbar = () => {
                                 </a>
                                 <ul className="dropdown-menu">
                                     <li>
-                                        <a className="dropdown-item" href="#">
+                                        <Link className="dropdown-item" href="#">
                                             Screen
-                                        </a>
+                                        </Link>
                                     </li>
                                     <li>
-                                        <a className="dropdown-item" href="#">
+                                        <Link className="dropdown-item" href="#">
                                             Interview
-                                        </a>
+                                        </Link>
                                     </li>
                                     <li>
                                         <hr className="dropdown-divider" />
                                     </li>
                                     <li>
-                                        <a className="dropdown-item" href="#">
+                                        <Link className="dropdown-item" href="#">
                                             Certified Assessment
-                                        </a>
+                                        </Link>
                                     </li>
                                     <li>
-                                        <a className="dropdown-item" href="#">
+                                        <Link className="dropdown-item" href="#">
                                             Plagiarism Detection
-                                        </a>
+                                        </Link>
                                     </li>
                                     <li>
-                                        <a className="dropdown-item" href="#">
+                                        <Link className="dropdown-item" href="#">
                                             Real Word Question
-                                        </a>
+                                        </Link>
                                     </li>
                                 </ul>
                             </li>
@@ -74,37 +75,37 @@ const Navbar = () => {
                                 </a>
                                 <ul className="dropdown-menu">
                                     <li>
-                                        <a className="dropdown-item" href="#">
+                                        <Link className="dropdown-item" href="#">
                                          Setup your Skill strategy
-                                        </a>
+                                        </Link>
                                     </li>
                                     <li>
-                                        <a className="dropdown-item" href="#">
+                                        <Link className="dropdown-item" href="#">
                                             Showcase your talent Brand
-                                        </a>
+                                        </Link>
                                     </li>
                                     <li>
                                        
                                     </li>
                                     <li>
-                                        <a className="dropdown-item" href="#">
+                                        <Link className="dropdown-item" href="#">
                                             Optimiize your Hiring Skill
-                                        </a>
+                                        </Link>
                                     </li>
                                     <li>
-                                        <a className="dropdown-item" href="#">
+                                        <Link className="dropdown-item" href="#">
                                             Mobilize your internal talent
-                                        </a>
+                                        </Link>
                                     </li>
                                     <li>
-                                        <a className="dropdown-item" href="#">
+                                        <Link className="dropdown-item" href="#">
                                            Embrace AI
-                                        </a>
+                                        </Link>
                                     </li>
                                 </ul>
                             </li>
                             <li className="nav-item dropdown">
-                                <a
+                                <Link
                                     className="nav-link dropdown-toggle"
                                     href="#"
                                     role="button"
@@ -112,27 +113,27 @@ const Navbar = () => {
                                     aria-expanded="false"
                                 >
                                     Resurces
-                                </a>
+                                </Link>
                                 <ul className="dropdown-menu">
                                     <li>
-                                        <a className="dropdown-item" href="#">
+                                        <Link className="dropdown-item" href="#">
                                            Blog
-                                        </a>
+                                        </Link>
                                     </li>
                                     <li>
-                                        <a className="dropdown-item" href="#">
+                                        <Link className="dropdown-item" href="#">
                                            Roles Directory
-                                        </a>
+                                        </Link>
                                     </li>
                                     <li>
-                                        <a className="dropdown-item" href="#">
+                                        <Link className="dropdown-item" href="#">
                                           Resources Library
-                                        </a>
+                                        </Link>
                                     </li>
                                     <li>
-                                        <a className="dropdown-item" href="#">
+                                        <Link className="dropdown-item" href="#">
                                           Customer Stories
-                                        </a>
+                                        </Link>
                                     </li>
                                     
                                     
@@ -140,36 +141,36 @@ const Navbar = () => {
                                         <hr className="dropdown-divider" />
                                     </li>
                                     <li>
-                                        <a className="dropdown-item" href="#">
+                                        <Link className="dropdown-item" href="#">
                                             Partner
-                                        </a>
+                                        </Link>
                                     </li>
                                     <li>
-                                        <a className="dropdown-item" href="#">
+                                        <Link className="dropdown-item" href="#">
                                             Integration
-                                        </a>
+                                        </Link>
                                     </li>
                                     <li>
-                                        <a className="dropdown-item" href="#">
+                                        <Link className="dropdown-item" href="#">
                                             What's New
-                                        </a>
+                                        </Link>
                                     </li>
                                     <li>
-                                        <a className="dropdown-item" href="#">
+                                        <Link className="dropdown-item" href="#">
                                           Support center
-                                        </a>
+                                        </Link>
                                     </li>
                                 </ul>
                             </li>
                             <li className="nav-item">
-                                <a className="nav-link" aria-disabled="true">
+                                <Link className="nav-link" aria-disabled="true">
                                     Pricing
-                                </a>
+                                </Link>
                             </li>
                             <li className="nav-item ms-5">
-                                <a className="nav-link" aria-disabled="true">
+                                <Link className="nav-link" aria-disabled="true" to="/user/login">
                                     For Developrs
-                                </a>
+                                </Link>
                             </li>
                         </ul>
                         <form className="d-flex" role="search">
