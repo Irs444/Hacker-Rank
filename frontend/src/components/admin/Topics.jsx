@@ -1,5 +1,7 @@
 import React from 'react'
 import {  useNavigate } from 'react-router-dom'
+import Navbar1 from '../admin/Navbar1'
+
 
 const Topics = () => {
     const navigate = useNavigate();
@@ -9,6 +11,7 @@ const Topics = () => {
     }
   return (
     <div>
+        <Navbar1/>
         <div className="container">
             <div className="content">
             

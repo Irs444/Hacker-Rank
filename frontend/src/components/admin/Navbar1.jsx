@@ -26,12 +26,12 @@ const Navbar1 = () => {
     <div className="collapse navbar-collapse" id="navbarSupportedContent">
       <ul className="navbar-nav me-auto mb-2 mb-lg-0">
         <li className="nav-item">
-          <Link className="nav-link  fw-semibold" aria-current="page" href="#" to={"/topics"}>
+          <Link className="nav-link text-white fw-semibold" aria-current="page" href="#" to={"/topics"}>
            Prepare
           </Link>
         </li>
         <li className="nav-item">
-          <Link className="nav-link fw-semibold" href="#" to={"/certificate"}>
+          <Link className="nav-link text-white fw-semibold" href="#" to={"/certificate"}>
            Certify
           </Link>
         </li>
@@ -67,15 +67,16 @@ const Navbar1 = () => {
           </ul>
         </li> */}
         <li className="nav-item">
-          <Link className="nav-link fw-semibold" aria-disabled="true" to={"/compete"}>
+          <Link className="nav-link text-white fw-semibold" aria-disabled="true" to={"/compete"}>
             Compete
           </Link>
         </li>
         <li className="nav-item">
-          <Link className="nav-link fw-semibold" aria-disabled="true" to={"/dashboard"}>
+          <Link className="nav-link text-white fw-semibold" aria-disabled="true" to={"/dashboard"}>
             Apply
           </Link>
         </li>
+       
       </ul>
       <form className="d-flex" role="search">
         <input
@@ -88,6 +89,19 @@ const Navbar1 = () => {
           Search
         </button>
       </form>
+      {/* <ul className="nav justify-content-end">
+  <li className="nav-item ">
+    <Link className="nav-link text-white fw-semibold"  href="#">
+      For developers
+    </Link>
+  </li>
+ 
+</ul>
+<div>
+<button className='btn btn-light me-2'>Request Demo</button>
+<button className='btn btn-success'>Signup</button>
+
+</div>  */}
     </div>
   </div>
 </nav>

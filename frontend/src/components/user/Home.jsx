@@ -1,8 +1,15 @@
 import React from 'react'
+import Navbar from "../user/Navbar"
+import { useNavigate } from 'react-router-dom';
 
 const Home = () => {
+  const navigate = useNavigate();
+    const signpage = () => {
+        navigate("/signup")
+    }
   return (
     <div  >
+      <Navbar/>
       <div className="container " >
         <div className=" d-flex justify-content-center  lh-sm " style={{paddingTop:"150.2px", fontSize:"60px", fontWeight:"bold"}}>
           <span>Skills Speaks louder<br/><span style={{marginInline:"100px"}}> than words</span></span>
@@ -13,7 +20,7 @@ const Home = () => {
            
         </div>
         <div className='d-flex justify-content-center'>
-            <button className='btn border text-white fw-bold px-5 py-2' style={{backgroundColor:"green"}}>Sign up</button>
+            <button className='btn border text-white fw-bold px-5 py-2' style={{backgroundColor:"green"}} onClick={signpage}>Sign up</button>
             <button className='btn border border-dark ms-4  fw-bold px-4 py-2' >Request demo</button>
         </div>
         <div>
@@ -33,12 +40,76 @@ const Home = () => {
       </div>
       <div className="container">
         <div className='d-flex justify-content-center lh-sm pt-5'>
-            <p style={{fontSize:"56px"}}>It’s not a pipeline problem.<br/><p className='mx-4'>It’s a spotlight problem.</p></p>
+            <p style={{fontSize:"56px"}}>It’s not a pipeline problem.<br/><p className='mx-4 text-success'>It’s a spotlight problem.</p></p>
         </div>
         <div className='d-flex justify-content-center'>
             <p style={{ textAlign:"center"}}>Tech hiring needs a reset. From prepping for jobs and practicing coding to running a <br/>world-class technical interview, give developers the tools they need to showcase their <br/>skills, passion, and potential.</p>
         </div>
       </div>
+      <div className="container">
+        <div className=' d-flex justify-content-center my-3' >
+          <a style={{paddingInline:"70px"}} className='text-dark fw-bold' href="">Prep</a>
+          <a style={{paddingInline:"70px"}} className=' text-dark fw-bold' href="">Screen</a>
+          <a style={{paddingInline:"70px"}} className=' text-dark fw-bold' href="">Interview</a>
+        </div>
+      </div>
+      <div className="container">
+        <div className="card bg-dark my-5">
+          <div className="card-body">
+            <div className="row">
+             
+              <div className="col-6 text-white text-center ">
+              <div>
+                <p className='text-start ms-3'>o-:: Coding Practice ::</p>
+              </div>
+                <div className='my-5'>
+                  <h3 style={{fontSize:'24px',fontWeight:"800"}}>Explore and expand your<br/> skills.</h3>
+                </div>
+                <div>
+                  <p>Every idea has a first line of code. Prep for<br/> jobs and sharpen your skills alongside a <br/>global community of developers. Access the<br/> content you need to develop new skills – and<br/> land the job you’ve dreamed of.</p>
+                </div>
+                <div>
+                  <button className='btn border border-white fw-bold px-4 py-2 text-white my-2'>Signup and Practice &rarr;</button>
+                </div>
+              </div>
+              <div className="col-6 text-center">
+               
+                  <img src="https://www.jobsoid.com/wp-content/uploads/2017/09/rich-candidate-profiles.png" alt="" style={{width:"500px"}} />
+                
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className="container " style={{paddingInline:"80px"}}>
+        <div>
+        <p>:: Coding Practice ::</p>
+        </div>
+        <div className='lh-1'>
+          <p style={{fontSize:"56px"}} className='text-success'>Join the movement.</p>
+          <p style={{fontSize:"56px"}}>Screen on skills.</p>
+        </div>
+      </div>
+      {/* <div className="container">
+        <div className="row">
+          <div className="col-4">
+            <div>
+              <p>Melissa Ibarra</p>
+            </div>
+            <div>
+              <button><span>Create Interview</span><br/><span>Create and schedule an interview for the <br/>candidate</span></button>
+            </div>
+          </div>
+          <div className="col-8">
+            <div className="row">
+              <div className="col-4">column</div>
+              <div className="col-4">column</div>
+              <div className="col-4">column</div>
+            </div>
+            <div className="row">sajsk</div>
+          </div>
+        </div>
+      </div> */}
     </div>
   )
 }

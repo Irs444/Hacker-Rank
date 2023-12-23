@@ -1,14 +1,88 @@
+import { useFormik } from 'formik';
 import React from 'react'
 import { useNavigate } from 'react-router-dom';
+import * as Yup from 'yup';
+
+const FormSchema = Yup.object().shape({
+    fname: Yup.string()
+    .min(2, 'Too Short!')
+    .max(10, 'Too Long!')
+    .required('Required'),
+
+    lname: Yup.string()
+    .min(2, 'Too Short!')
+    .max(10, 'Too Long!')
+    .required('Required'),
+
+    country: Yup.string()
+    .required('Required'),
+
+    number: Yup.string()
+    .required('Required'),
+
+    profession: Yup.string()
+    .required('Required'),
+
+    month: Yup.string()
+    .required('Required'),
+
+    year: Yup.string()
+
+    .required('Required')
+});
 
 const CtestForm = () => {
 
     const navigate = useNavigate();
 
-    const allow = () => {
-        navigate('/test');
-    }
+  
+    
+    const Form = useFormik({
+        initialValues:{
+           fname: '',
+           lname: '',
+           country: '',
+           number: '',
+           profession: '',
+           month: '',
+              year: '',
+                degree: '',
+                course: ''
 
+        },
+        onSubmit: async (values, {setSubmitting}) => {
+            setSubmitting(true);
+          console.log(values);
+        
+           const res = await fetch("http://localhost:5000/form/add",{
+             method: 'POST',
+             body: JSON.stringify(values),
+             headers: {
+              'Content-Type' : 'application/json'
+             }
+           });
+           console.log(res.status);
+           
+            
+           if (res.status === 200){
+        
+        
+            Swal.fire({
+              icon: 'success',
+              title: 'Nice',
+              text: 'you have registerd now'
+            })
+            navigate('/test');
+           } else{
+            Swal.fire({
+             icon: 'erroe',
+             title: 'opps',
+             text: 'somthing wrong' 
+            })
+           }
+          },
+   validationSchema : FormSchema
+    })
   return (
     <div>
         <div className="container my-3">
@@ -56,17 +130,23 @@ const CtestForm = () => {
                 </div>
                 </div>
                  
-                 <fieldset>
+                <form action="" onSubmit={Form.handleSubmit}>
                  <p className='fw-bold'>PERSONAL</p>
-                <form action="">
+               
                <div className="row">
                 <div className="col-6">
-                    <label htmlFor="name" className='form-label'>First Name</label>
-                    <input type="text" id='name' className='form-control' />
+                    <label htmlFor="fname" className='form-label'>First Name</label>
+                    <input type="text" id='fname' className='form-control'
+                    values={Form.values.fname}
+                    onChange={Form.handleChange} />
+                    <span className='text-danger'>{Form.errors.fname}</span>
                 </div>
                 <div className="col-6">
-                <label htmlFor="name" className='form-label'>Last Name</label>
-                    <input type="text" id='name' className='form-control' />
+                <label htmlFor="lname" className='form-label'>Last Name</label>
+                    <input type="text" id='lname' className='form-control'
+                    values={Form.values.lname}
+                    onChange={Form.handleChange} />
+                    <span className="text-danger">{Form.errors.lname}</span>
                 </div>
                </div>
                <div className='mb-4'>
@@ -77,14 +157,16 @@ const CtestForm = () => {
                 <div className="col-6">
                 <label htmlFor="floatingSelect" >Country of Residence</label>
              
-                <select name="" id="floatingSelect" className='form-select mb-4' >
+                <select name="" id="country" className='form-select mb-4'
+                values={Form.values.country}
+                onChange={Form.handleChange} >
                     <option value="">India</option>
                     <option value="">India</option>
                     <option value="">India</option>
                     <option value="">India</option>
                 </select>
              
-              
+              <span className="text-danger">{Form.errors.country}</span>
                 </div>
                </div>
                <div className="row">
@@ -93,9 +175,12 @@ const CtestForm = () => {
                     <div className="row">
                         <div className="col-2">
                            
-                                <select name="" id="number" className='form-select mb-4'>
+                                <select name="" id="number" className='form-select mb-4'
+                                values={Form.values.number}
+                                onChange={Form.handleChange}>
                                     <option value="">+91</option>
                                 </select>
+                                <span className="text-danger">{Form.errors.number}</span>
                           
                         </div>
                         <div className="col-10">
@@ -104,16 +189,18 @@ const CtestForm = () => {
                     </div>
                 </div>
                </div>
-                </form>
-                </fieldset>
-                <fieldset>
+             
+                
+               
                    <p className='fw-bold'>PROFESSIONAL</p>
-                   <form action="">
+                   
                     <div className="row">
                         <div className="col-6">
                             <label htmlFor="student" className='form-label'>I am currently a</label>
                           
-                            <select name="" id="student" className='form-select mb-4'>
+                            <select name="" id="profession" className='form-select mb-4'
+                            values={Form.values.profession}
+                            onChange={Form.handleChange}>
                                 <option value="">Professional</option>
                                 <option value="">Student</option>
                                 
@@ -138,44 +225,56 @@ const CtestForm = () => {
                         <div className="col-6">
                             <label htmlFor="year" className='mb-1'>Expected year of Graduation </label>
                            
-                                <select name="" id="year" className='form-select mb-4 ' aria-label="Small select example">
+                                <select name="" id="year" className='form-select mb-4 ' aria-label="Small select example"
+                                values={Form.values.month}
+                                onChange={Form.handleChange}>
                                     <option value="">2021</option>
                                     <option value="">2022</option>
                                     <option value="">2023</option>
                                     <option value="">2024</option>
                                 </select>
+                                <span className="text-danger">{Form.errors.month}</span>
                            
                         </div>
                         <div className="col-6">
                         <label htmlFor="year" className='mb-1'>Expected month of Graduation </label>
                            
-                                <select name="" id="year" className='form-select mb-4'>
+                                <select name="" id="month" className='form-select mb-4'
+                                values={Form.values.year}
+                                onChange={Form.handleChange}>
                                     <option value="">January</option>
                                     <option value="">Febuary</option>
                                     <option value="">March</option>
                                     <option value="">April</option>
                                 </select>
+                                <span className="text-danger">{Form.errors.year}</span>
                          
                         </div>
                     </div>
                     <div className="row">
                         <div className="col-6">
                             <label htmlFor="degree" className='form-label'>Degree</label>
-                            <select name="" id="degree" className='form-select mb-4'>
+                            <select name="" id="degree" className='form-select mb-4'
+                            values={Form.values.degree}
+                            onChange={Form.handleChange}>
                                 <option value="">B.tech</option>
                                 <option value="">BBA</option>
                                 <option value="">MBA</option>
                                 <option value="">M.tech</option>
                             </select>
+                            <span className="text-danger">{Form.errors.degree}</span>
                         </div>
                         <div className="col-6">
                         <label htmlFor="program" className='form-label'>Program</label>
-                            <select name="" id="pprogram" className='form-select mb-4'>
+                            <select name="" id="course" className='form-select mb-4'
+                            values={Form.values.course}
+                            onChange={Form.handleChange}>
                                 <option value="">Computer Science</option>
                                 <option value="">Computer Networking</option>
                                 <option value="">Data Science</option>
                                 <option value="">Electrical Engineering</option>
                             </select>
+                            <span className="text-danger">{Form.errors.course}</span>
                         </div>
                     </div>
                     <div className="row">
@@ -190,11 +289,11 @@ const CtestForm = () => {
                     </div>
 
 
-                   </form>
-                </fieldset>
-                <fieldset>
+                  
+               
+               
                   <p className='fw-bold'>WORK AUTHORIZATION</p>
-                  <form action="">
+                  
                     <label htmlFor="authorize" className='form-label'>Are you legally authorized to work in the United State</label>
                     
                     <div className='d-flex justify-content-start'>
@@ -210,10 +309,15 @@ const CtestForm = () => {
 
                    </div>
                    <div className='my-3'>
-                    <button className='btn btn-success fw-bold' onClick={allow}>Proceed</button>
+                    <button className='btn btn-success fw-bold' type='submit'
+                    
+                    disabled={Form.isSubmitting}>
+                        {Form.isSubmitting && <span className="spinner-border spinner-border-sm" ></span>}
+                        &nbsp;&nbsp;
+                        Proceed</button>
                    </div>
+                
                   </form>
-                </fieldset>
 
             </div>
         </div>
