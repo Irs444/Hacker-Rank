@@ -14,7 +14,7 @@ const FormRouter = require("./routers/formRouter")
  }));
 
  app.use("/user", UserRouter);
- app.use("/form",FormRouter)
+ app.use("/form",FormRouter);
 //  app.use("/topics", toipcRouter)
 //  app.use("/questions", questionRouter)
 //  app.use("/solutions", solutionRouter)
