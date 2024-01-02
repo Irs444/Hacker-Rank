@@ -1,8 +1,10 @@
 import React from 'react'
+import Navbar1 from './Navbar1'
 
 const Taketest = () => {
   return (
     <div>
+        <Navbar1/>
           <div className="container my-3">
 
 <div >

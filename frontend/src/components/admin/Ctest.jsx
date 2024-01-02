@@ -1,5 +1,6 @@
 import React from 'react'
 import { Navigate, useNavigate } from 'react-router-dom'
+import Navbar1 from './Navbar1';
 
 const Ctest = () => {
   const  navigate = useNavigate();
@@ -8,6 +9,7 @@ const Ctest = () => {
      }
   return (
     <div>
+        <Navbar1/>
         <div className="container my-3">
 
             <div >

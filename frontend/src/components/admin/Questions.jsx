@@ -1,5 +1,6 @@
 import React from 'react'
 import { useNavigate } from 'react-router-dom'
+import Navbar1 from './Navbar1';
 
 const Questions = () => {
 
@@ -7,10 +8,11 @@ const Questions = () => {
     
     const tryagain = () => {
        
-        navigate('/solutions')
+        navigate('/solutions:/id')
     }
   return (
     <div>
+        <Navbar1/>
         <div className="container my-4">
             <div className=" d-flex justify-content-between">
                 <div className="item">
@@ -47,7 +49,7 @@ const Questions = () => {
                             </div>
                             <div className="item d-flex justify-content-between my-2">
                                 <p>This is an easy challenge to help you start coding in your<br/> favorite languages!</p>
-                                <button className='btn btn-success m-3'onClick={tryagain} >Try Again </button>
+                                <button  className='btn btn-success m-3' onClick={tryagain} >Try Again </button>
                             </div>
                         </div>
                     </div>

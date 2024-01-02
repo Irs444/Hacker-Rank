@@ -2,13 +2,13 @@ const { model, Schema } = require('../connection');
 
 const FormSchema = new Schema({
     name: String,
-    country: String,
-    number: Number,
-    profession: String,
-    month: Number,
+    email: String,
+    collage: String,
     year: String,
     degree: String,
     course: String,
+    number: Number,
+   
    
     date: { type: Date, default: Date.now },
 });

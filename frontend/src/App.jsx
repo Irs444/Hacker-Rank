@@ -1,4 +1,4 @@
-import Recat, { useState } from 'react'
+import React, { useState } from 'react'
 import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom"
 // import './App.css'
 import Navbar from './components/user/Navbar'
@@ -19,6 +19,8 @@ import JobDashboard from './components/admin/JobDashboard'
 import Signup from './components/user/Signup'
 import Login from './components/user/Login'
 import { UserProvider } from './context/UserContext'
+import Apply from './components/admin/apply'
+import Addsolution from './components/admin/Addsolution'
 
 function App() {
 
@@ -26,19 +28,19 @@ function App() {
   return (
     <>
       <BrowserRouter>
-      <UserProvider>
-        {/* <Navbar/> */}
-        
-       
-        <Routes>
-          
-        <Route path='/' element={<Home />} />
+        <UserProvider>
+          {/* <Navbar/> */}
+
+
+          <Routes>
+
+            <Route path='/' element={<Home />} />
             <Route path='topics' element={<Topics />} />
             <Route path='questions' element={<Questions />} />
-           <Route path='signup' element={<Signup />} />
-           <Route path='login' element={<Login />} />
+            <Route path='signup' element={<Signup />} />
+            <Route path='login' element={<Login />} />
 
-            <Route path='solutions' element={<Solutions />} />
+            <Route path='solutions/:id' element={<Solutions />} />
             <Route path='certificate' element={<Certificate />} />
             <Route path='ctest' element={<Ctest />} />
             <Route path='ctestform' element={<CtestForm />} />
@@ -47,15 +49,18 @@ function App() {
             <Route path='managecontest' element={<ManageContest />} />
             <Route path='createcontest' element={<CreateContest />} />
             <Route path='dashboard' element={<JobDashboard />} />
-       
-
-          
-           
-
-    
+            <Route path='apply' element={<Apply />} />
+            <Route path='addsolution' element={<Addsolution />} />
 
 
-        </Routes>
+
+
+
+
+
+
+
+          </Routes>
         </UserProvider>
       </BrowserRouter>
 

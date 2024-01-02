@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link, useNavigate } from 'react-router-dom'
+import Navbar1 from './Navbar1';
 
 const ManageContest = () => {
 
@@ -10,6 +11,7 @@ const ManageContest = () => {
     }
   return (
     <div>
+        <Navbar1/>
         <div className="container">
             <h2 className='my-3'>Administration</h2>
         </div>

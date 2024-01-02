@@ -7,6 +7,10 @@ const Navbar = () => {
     const signpage = () => {
         navigate("/signup")
     }
+
+    const logpage = () => {
+        navigate("/login")
+    } 
     return (
         <div >
 
@@ -193,8 +197,8 @@ const Navbar = () => {
                                 placeholder="Search"
                                 aria-label="Search"
                             /> */}
-                            <button className="btn btn-light me-2" type="submit">
-                                Request Demo
+                            <button className="btn btn-light me-2" type="submit" onClick={logpage}>
+                               Login
                             </button>
                             <button className="btn btn-success me-5" type="submit" onClick={signpage}>
                                 Signup

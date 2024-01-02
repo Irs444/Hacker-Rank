@@ -58,7 +58,7 @@ const Signup = () => {
        Swal.fire({
          icon: 'success',
          title: 'Nice',
-         text: 'you have registerd now'
+         text: 'you have registered now'
        })
        navigate('/login');
       } else{

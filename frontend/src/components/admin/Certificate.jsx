@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link, useNavigate } from 'react-router-dom'
+import Navbar1 from './Navbar1';
 
 const Certificate = () => {
 
@@ -9,6 +10,7 @@ const Certificate = () => {
     }
   return (
     <div>
+        <Navbar1/>
         <div className="container   ">
             <div className="header my-3">
                 <span>Dasboard</span>

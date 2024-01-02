@@ -1,8 +1,10 @@
 import React from 'react'
+import Navbar1 from './Navbar1'
 
 const CreateContest = () => {
     return (
         <div>
+            <Navbar1/>
             <div className="container my-5">
                 <div>
                     <span className='fw-bold'>Manage Contest &gt; Create Contest</span>

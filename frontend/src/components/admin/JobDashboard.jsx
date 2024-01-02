@@ -1,8 +1,17 @@
 import React from 'react'
+import Navbar1 from './Navbar1'
+import { useNavigate } from 'react-router-dom';
 
 const JobDashboard = () => {
+
+    const navigate = useNavigate();
+
+    const apply = () => {
+        navigate('/apply')
+    }
   return (
     <div>
+        <Navbar1/>
         <div className="container my-3">
             <p className='m-0'>Apply</p>
             <h2>Get Your Dream Job</h2>
@@ -11,7 +20,7 @@ const JobDashboard = () => {
         <div className="container bg-light">
             <div className="row my-5">
                 <div className="col-3  ">
-                    <div className="card py-4">
+                    <div className="card py-4" onClick={apply}>
                         <div className="card-body">
                             <span className='fw-bold my-3'>Handpicked Remote Jobs</span>
                             <p>Work from anywhere</p>
@@ -22,7 +31,7 @@ const JobDashboard = () => {
                     </div>
                 </div>
                 <div className="col-3">
-                <div className="card py-4">
+                <div className="card py-4" onClick={apply}>
                         <div className="card-body">
                             <span className='fw-bold my-3'>Internship Spotlight</span>
                             <p>start your journey</p>
@@ -33,7 +42,7 @@ const JobDashboard = () => {
                     </div>
                 </div>
                 <div className="col-3">
-                <div className="card py-4 bg-dark text-white">
+                <div className="card py-4 bg-dark text-white" onClick={apply}>
                         <div className="card-body">
                             <span className='fw-bold my-3'>Handpicked Remote Jobs</span>
                             <p>Work from anywhere</p>
@@ -93,6 +102,488 @@ const JobDashboard = () => {
      
             </div>
         </div>
+        <div className="container">
+            <div className="row">
+                <div className="col-3">
+                    <div className="card" onClick={apply}>
+                        <div className="card-body p-4">
+                            <div className="d-flex justify-content-between">
+                                <div className='d-flex justify-content-start'>
+                                    <img src="https://tse2.mm.bing.net/th?id=OIP.NhhuMSxWQBsx2h1SeoIhNAHaCu&pid=Api&P=0&h=180" alt="" height={20} />
+                                    <p className='fw-bold'>ThoughSpot</p>
+                                   
+                                </div>
+                               
+                                <div>
+                                    <img src="https://cdn.onlinewebfonts.com/svg/img_573021.png" alt="" height={20} />
+                                </div>
+                            </div>
+                            <div>
+                                <p className='fw-bold'>Staff-Engineer- Backend</p>
+                                </div>
+                            <div className="d-flex justify-content-between">
+                                <div>
+                                    <p>Java.Problem Solving.Python</p>
+                                </div>
+                               
+                            </div>
+                            <div>
+                                <button className='btn btn-light rounded-5'>India</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div className="col-3">
+                    <div className="card" onClick={apply}>
+                    <div className="card-body p-4">
+                            <div className="d-flex justify-content-between">
+                                <div className='d-flex justify-content-start'>
+                                    <img src="https://tse2.mm.bing.net/th?id=OIP.NhhuMSxWQBsx2h1SeoIhNAHaCu&pid=Api&P=0&h=180" alt="" height={20} />
+                                    <p className='fw-bold'>ThoughSpot</p>
+                                   
+                                </div>
+                               
+                                <div>
+                                    <img src="https://cdn.onlinewebfonts.com/svg/img_573021.png" alt="" height={20} />
+                                </div>
+                            </div>
+                            <div>
+                                <p className='fw-bold'>Staff-Engineer- Backend</p>
+                                </div>
+                            <div className="d-flex justify-content-between">
+                                <div>
+                                    <p>Java.Problem Solving.Python</p>
+                                </div>
+                               
+                            </div>
+                            <div>
+                                <button className='btn btn-light rounded-5'>India</button>
+                            </div>
+                        </div> 
+                    </div>
+                </div>
+                <div className="col-3">
+                    <div className="card" onClick={apply}>
+                    <div className="card-body p-4">
+                            <div className="d-flex justify-content-between">
+                                <div className='d-flex justify-content-start'>
+                                    <img src="https://tse2.mm.bing.net/th?id=OIP.NhhuMSxWQBsx2h1SeoIhNAHaCu&pid=Api&P=0&h=180" alt="" height={20} />
+                                    <p className='fw-bold'>ThoughSpot</p>
+                                   
+                                </div>
+                               
+                                <div>
+                                    <img src="https://cdn.onlinewebfonts.com/svg/img_573021.png" alt="" height={20} />
+                                </div>
+                            </div>
+                            <div>
+                                <p className='fw-bold'>Staff-Engineer- Backend</p>
+                                </div>
+                            <div className="d-flex justify-content-between">
+                                <div>
+                                    <p>Java.Problem Solving.Python</p>
+                                </div>
+                               
+                            </div>
+                            <div>
+                                <button className='btn btn-light rounded-5'>India</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div className="col-3">
+                    <div className="card" onClick={apply}>
+                    <div className="card-body p-4">
+                            <div className="d-flex justify-content-between">
+                                <div className='d-flex justify-content-start'>
+                                    <img src="https://tse2.mm.bing.net/th?id=OIP.NhhuMSxWQBsx2h1SeoIhNAHaCu&pid=Api&P=0&h=180" alt="" height={20} />
+                                    <p className='fw-bold'>ThoughSpot</p>
+                                   
+                                </div>
+                               
+                                <div>
+                                    <img src="https://cdn.onlinewebfonts.com/svg/img_573021.png" alt="" height={20} />
+                                </div>
+                            </div>
+                            <div>
+                                <p className='fw-bold'>Staff-Engineer- Backend</p>
+                                </div>
+                            <div className="d-flex justify-content-between">
+                                <div>
+                                    <p>Java.Problem Solving.Python</p>
+                                </div>
+                               
+                            </div>
+                            <div>
+                                <button className='btn btn-light rounded-5'>India</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+        <div className="container">
+        <div className="row my-3">
+                <div className="col-3">
+                    <div className="card" onClick={apply}>
+                        <div className="card-body p-4">
+                            <div className="d-flex justify-content-between">
+                                <div className='d-flex justify-content-start'>
+                                    <img src="https://tse2.mm.bing.net/th?id=OIP.NhhuMSxWQBsx2h1SeoIhNAHaCu&pid=Api&P=0&h=180" alt="" height={20} />
+                                    <p className='fw-bold'>ThoughSpot</p>
+                                   
+                                </div>
+                               
+                                <div>
+                                    <img src="https://cdn.onlinewebfonts.com/svg/img_573021.png" alt="" height={20} />
+                                </div>
+                            </div>
+                            <div>
+                                <p className='fw-bold'>Staff-Engineer- Backend</p>
+                                </div>
+                            <div className="d-flex justify-content-between">
+                                <div>
+                                    <p>Java.Problem Solving.Python</p>
+                                </div>
+                               
+                            </div>
+                            <div>
+                                <button className='btn btn-light rounded-5'>India</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div className="col-3">
+                    <div className="card" onClick={apply}>
+                    <div className="card-body p-4">
+                            <div className="d-flex justify-content-between">
+                                <div className='d-flex justify-content-start'>
+                                    <img src="https://tse2.mm.bing.net/th?id=OIP.NhhuMSxWQBsx2h1SeoIhNAHaCu&pid=Api&P=0&h=180" alt="" height={20} />
+                                    <p className='fw-bold'>ThoughSpot</p>
+                                   
+                                </div>
+                               
+                                <div>
+                                    <img src="https://cdn.onlinewebfonts.com/svg/img_573021.png" alt="" height={20} />
+                                </div>
+                            </div>
+                            <div>
+                                <p className='fw-bold'>Staff-Engineer- Backend</p>
+                                </div>
+                            <div className="d-flex justify-content-between">
+                                <div>
+                                    <p>Java.Problem Solving.Python</p>
+                                </div>
+                               
+                            </div>
+                            <div>
+                                <button className='btn btn-light rounded-5'>India</button>
+                            </div>
+                        </div> 
+                    </div>
+                </div>
+                <div className="col-3">
+                    <div className="card" onClick={apply}>
+                    <div className="card-body p-4">
+                            <div className="d-flex justify-content-between">
+                                <div className='d-flex justify-content-start'>
+                                    <img src="https://tse2.mm.bing.net/th?id=OIP.NhhuMSxWQBsx2h1SeoIhNAHaCu&pid=Api&P=0&h=180" alt="" height={20} />
+                                    <p className='fw-bold'>ThoughSpot</p>
+                                   
+                                </div>
+                               
+                                <div>
+                                    <img src="https://cdn.onlinewebfonts.com/svg/img_573021.png" alt="" height={20} />
+                                </div>
+                            </div>
+                            <div>
+                                <p className='fw-bold'>Staff-Engineer- Backend</p>
+                                </div>
+                            <div className="d-flex justify-content-between">
+                                <div>
+                                    <p>Java.Problem Solving.Python</p>
+                                </div>
+                               
+                            </div>
+                            <div>
+                                <button className='btn btn-light rounded-5'>India</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div className="col-3">
+                    <div className="card" onClick={apply}>
+                    <div className="card-body p-4">
+                            <div className="d-flex justify-content-between">
+                                <div className='d-flex justify-content-start'>
+                                    <img src="https://tse2.mm.bing.net/th?id=OIP.NhhuMSxWQBsx2h1SeoIhNAHaCu&pid=Api&P=0&h=180" alt="" height={20} />
+                                    <p className='fw-bold'>ThoughSpot</p>
+                                   
+                                </div>
+                               
+                                <div>
+                                    <img src="https://cdn.onlinewebfonts.com/svg/img_573021.png" alt="" height={20} />
+                                </div>
+                            </div>
+                            <div>
+                                <p className='fw-bold'>Staff-Engineer- Backend</p>
+                                </div>
+                            <div className="d-flex justify-content-between">
+                                <div>
+                                    <p>Java.Problem Solving.Python</p>
+                                </div>
+                               
+                            </div>
+                            <div>
+                                <button className='btn btn-light rounded-5'>India</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div className="container">
+        <div className="row my-3">
+                <div className="col-3">
+                    <div className="card" onClick={apply}>
+                        <div className="card-body p-4">
+                            <div className="d-flex justify-content-between">
+                                <div className='d-flex justify-content-start'>
+                                    <img src="https://tse2.mm.bing.net/th?id=OIP.NhhuMSxWQBsx2h1SeoIhNAHaCu&pid=Api&P=0&h=180" alt="" height={20} />
+                                    <p className='fw-bold'>ThoughSpot</p>
+                                   
+                                </div>
+                               
+                                <div>
+                                    <img src="https://cdn.onlinewebfonts.com/svg/img_573021.png" alt="" height={20} />
+                                </div>
+                            </div>
+                            <div>
+                                <p className='fw-bold'>Staff-Engineer- Backend</p>
+                                </div>
+                            <div className="d-flex justify-content-between">
+                                <div>
+                                    <p>Java.Problem Solving.Python</p>
+                                </div>
+                               
+                            </div>
+                            <div>
+                                <button className='btn btn-light rounded-5'>India</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div className="col-3">
+                    <div className="card" onClick={apply}>
+                    <div className="card-body p-4">
+                            <div className="d-flex justify-content-between">
+                                <div className='d-flex justify-content-start'>
+                                    <img src="https://tse2.mm.bing.net/th?id=OIP.NhhuMSxWQBsx2h1SeoIhNAHaCu&pid=Api&P=0&h=180" alt="" height={20} />
+                                    <p className='fw-bold'>ThoughSpot</p>
+                                   
+                                </div>
+                               
+                                <div>
+                                    <img src="https://cdn.onlinewebfonts.com/svg/img_573021.png" alt="" height={20} />
+                                </div>
+                            </div>
+                            <div>
+                                <p className='fw-bold'>Staff-Engineer- Backend</p>
+                                </div>
+                            <div className="d-flex justify-content-between">
+                                <div>
+                                    <p>Java.Problem Solving.Python</p>
+                                </div>
+                               
+                            </div>
+                            <div>
+                                <button className='btn btn-light rounded-5'>India</button>
+                            </div>
+                        </div> 
+                    </div>
+                </div>
+                <div className="col-3">
+                    <div className="card" onClick={apply}>
+                    <div className="card-body p-4" >
+                            <div className="d-flex justify-content-between">
+                                <div className='d-flex justify-content-start'>
+                                    <img src="https://tse2.mm.bing.net/th?id=OIP.NhhuMSxWQBsx2h1SeoIhNAHaCu&pid=Api&P=0&h=180" alt="" height={20} />
+                                    <p className='fw-bold'>ThoughSpot</p>
+                                   
+                                </div>
+                               
+                                <div>
+                                    <img src="https://cdn.onlinewebfonts.com/svg/img_573021.png" alt="" height={20} />
+                                </div>
+                            </div>
+                            <div>
+                                <p className='fw-bold'>Staff-Engineer- Backend</p>
+                                </div>
+                            <div className="d-flex justify-content-between">
+                                <div>
+                                    <p>Java.Problem Solving.Python</p>
+                                </div>
+                               
+                            </div>
+                            <div>
+                                <button className='btn btn-light rounded-5'>India</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div className="col-3">
+                    <div className="card" onClick={apply}>
+                    <div className="card-body p-4">
+                            <div className="d-flex justify-content-between">
+                                <div className='d-flex justify-content-start'>
+                                    <img src="https://tse2.mm.bing.net/th?id=OIP.NhhuMSxWQBsx2h1SeoIhNAHaCu&pid=Api&P=0&h=180" alt="" height={20} />
+                                    <p className='fw-bold'>ThoughSpot</p>
+                                   
+                                </div>
+                               
+                                <div>
+                                    <img src="https://cdn.onlinewebfonts.com/svg/img_573021.png" alt="" height={20} />
+                                </div>
+                            </div>
+                            <div>
+                                <p className='fw-bold'>Staff-Engineer- Backend</p>
+                                </div>
+                            <div className="d-flex justify-content-between">
+                                <div>
+                                    <p>Java.Problem Solving.Python</p>
+                                </div>
+                               
+                            </div>
+                            <div>
+                                <button className='btn btn-light rounded-5'>India</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div className="container">
+        <div className="row my-3">
+                <div className="col-3">
+                    <div className="card" onClick={apply}>
+                        <div className="card-body p-4">
+                            <div className="d-flex justify-content-between">
+                                <div className='d-flex justify-content-start'>
+                                    <img src="https://tse2.mm.bing.net/th?id=OIP.NhhuMSxWQBsx2h1SeoIhNAHaCu&pid=Api&P=0&h=180" alt="" height={20} />
+                                    <p className='fw-bold'>ThoughSpot</p>
+                                   
+                                </div>
+                               
+                                <div>
+                                    <img src="https://cdn.onlinewebfonts.com/svg/img_573021.png" alt="" height={20} />
+                                </div>
+                            </div>
+                            <div>
+                                <p className='fw-bold'>Staff-Engineer- Backend</p>
+                                </div>
+                            <div className="d-flex justify-content-between">
+                                <div>
+                                    <p>Java.Problem Solving.Python</p>
+                                </div>
+                               
+                            </div>
+                            <div>
+                                <button className='btn btn-light rounded-5'>India</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div className="col-3">
+                    <div className="card" onClick={apply}>
+                    <div className="card-body p-4">
+                            <div className="d-flex justify-content-between">
+                                <div className='d-flex justify-content-start'>
+                                    <img src="https://tse2.mm.bing.net/th?id=OIP.NhhuMSxWQBsx2h1SeoIhNAHaCu&pid=Api&P=0&h=180" alt="" height={20} />
+                                    <p className='fw-bold'>ThoughSpot</p>
+                                   
+                                </div>
+                               
+                                <div>
+                                    <img src="https://cdn.onlinewebfonts.com/svg/img_573021.png" alt="" height={20} />
+                                </div>
+                            </div>
+                            <div>
+                                <p className='fw-bold'>Staff-Engineer- Backend</p>
+                                </div>
+                            <div className="d-flex justify-content-between">
+                                <div>
+                                    <p>Java.Problem Solving.Python</p>
+                                </div>
+                               
+                            </div>
+                            <div>
+                                <button className='btn btn-light rounded-5'>India</button>
+                            </div>
+                        </div> 
+                    </div>
+                </div>
+                <div className="col-3">
+                    <div className="card" onClick={apply}>
+                    <div className="card-body p-4">
+                            <div className="d-flex justify-content-between">
+                                <div className='d-flex justify-content-start'>
+                                    <img src="https://tse2.mm.bing.net/th?id=OIP.NhhuMSxWQBsx2h1SeoIhNAHaCu&pid=Api&P=0&h=180" alt="" height={20} />
+                                    <p className='fw-bold'>ThoughSpot</p>
+                                   
+                                </div>
+                               
+                                <div>
+                                    <img src="https://cdn.onlinewebfonts.com/svg/img_573021.png" alt="" height={20} />
+                                </div>
+                            </div>
+                            <div>
+                                <p className='fw-bold'>Staff-Engineer- Backend</p>
+                                </div>
+                            <div className="d-flex justify-content-between">
+                                <div>
+                                    <p>Java.Problem Solving.Python</p>
+                                </div>
+                               
+                            </div>
+                            <div>
+                                <button className='btn btn-light rounded-5'>India</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div className="col-3">
+                    <div className="card" onClick={apply}>
+                    <div className="card-body p-4">
+                            <div className="d-flex justify-content-between">
+                                <div className='d-flex justify-content-start'>
+                                    <img src="https://tse2.mm.bing.net/th?id=OIP.NhhuMSxWQBsx2h1SeoIhNAHaCu&pid=Api&P=0&h=180" alt="" height={20} />
+                                    <p className='fw-bold'>ThoughSpot</p>
+                                   
+                                </div>
+                               
+                                <div>
+                                    <img src="https://cdn.onlinewebfonts.com/svg/img_573021.png" alt="" height={20} />
+                                </div>
+                            </div>
+                            <div>
+                                <p className='fw-bold'>Staff-Engineer- Backend</p>
+                                </div>
+                            <div className="d-flex justify-content-between">
+                                <div>
+                                    <p>Java.Problem Solving.Python</p>
+                                </div>
+                               
+                            </div>
+                            <div>
+                                <button className='btn btn-light rounded-5'>India</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
     </div>
   )
 }
