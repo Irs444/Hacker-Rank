@@ -16,7 +16,7 @@ const Addsolution = () => {
             setSubmitting(true);
             console.log(values);
 
-            const res = await fetch("http://localhost:5000/solutions/add", {
+            const res = await fetch("http://localhost:5000/addsolution/add", {
                 method: 'POST',
                 body: JSON.stringify(values),
                 headers: {

@@ -6,6 +6,7 @@ const { executeCpp } = require("./executeCpp")
 const UserRouter = require("./routers/userRouter")
 const FormRouter = require("./routers/formRouter")
 const SolutionRouter = require("./routers/solutionRouter")
+const AddSolutionRouter = require("./routers/addsolutionRouter")
  const cors = require('cors');
  const port = 5000;
 
@@ -22,6 +23,7 @@ const SolutionRouter = require("./routers/solutionRouter")
  app.use("/user", UserRouter);
  app.use("/form",FormRouter);
  app.use("/solutions",SolutionRouter);
+ app.use("/addsolution",AddSolutionRouter);
 
 
  // code compiler 
