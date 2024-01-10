@@ -21,6 +21,7 @@ import Login from './components/user/Login'
 import { UserProvider } from './context/UserContext'
 import Apply from './components/admin/apply'
 import Addsolution from './components/admin/Addsolution'
+import ListQuestion from './components/admin/ListQuestion'
 
 function App() {
 
@@ -51,6 +52,7 @@ function App() {
             <Route path='dashboard' element={<JobDashboard />} />
             <Route path='apply' element={<Apply />} />
             <Route path='addsolution' element={<Addsolution />} />
+            <Route path='listquestion' element={<ListQuestion />} />
 
 
 

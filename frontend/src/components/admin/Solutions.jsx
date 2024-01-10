@@ -57,7 +57,7 @@ const Solutions = () => {
                     <div className="col-6 left">
                         <div className="container-fluid px-0 mx-0">
                             <div className="row">
-                                <div className="col-2" />
+                                <div className="col-2" ></div>
                                 <div className="col-8">
                                    <div>
                                     <MDEditor.Markdown source={userData.content} style={{whiteSpace: "pre-wrap"}} />
