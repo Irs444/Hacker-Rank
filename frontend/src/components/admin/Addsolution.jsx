@@ -2,6 +2,7 @@ import { useFormik } from 'formik';
 import React, { useState } from 'react'
 import MDEditor from '@uiw/react-md-editor';
 import { useNavigate } from 'react-router-dom';
+import Swal from 'sweetalert2';
 
 
 
@@ -34,7 +35,7 @@ const Addsolution = () => {
                     title: 'Nice',
                     text: 'you have registered now'
                 })
-                navigate('/');
+                navigate('/solutions');
             } else {
                 Swal.fire({
                     icon: 'erroe',
