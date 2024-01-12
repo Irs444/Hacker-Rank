@@ -1,15 +1,34 @@
-import React from 'react'
-import { useNavigate } from 'react-router-dom'
+import React, { useEffect, useState } from 'react'
+import { Link, useNavigate } from 'react-router-dom'
 import Navbar1 from './Navbar1';
 
 const Questions = () => {
 
+    const [questionList, setQuestionList] = useState([]);
+
+    const fetchquestiondata = async () => {
+        const res = await fetch("http://localhost:5000/addsolution/getall");
+        console.log(res.status);
+
+        const data = await res.json();
+        console.log(data);
+        setQuestionList(data);
+
+    };
+
+    useEffect(() => {
+        fetchquestiondata();
+    }, []);
+
+
     const navigate = useNavigate();
     
-    const tryagain = () => {
+    const tryagain = (ques) => {
        
-        navigate('/solutions:/id')
+        navigate(`/solutions/${ques._id}`)
     }
+
+
   return (
     <div>
         <Navbar1/>
@@ -38,6 +57,9 @@ const Questions = () => {
            <div className="row my-4 ">
             <div className="col-8 ">
                 <div className="row my-3">
+                {
+                questionList.map((ques) => (
+
                     <div className="card">
                         <div className="card-body">
                             <div className="item">
@@ -46,15 +68,18 @@ const Questions = () => {
                                 <span>Problem Solving(basic),</span>
                                 <span>Max Score: 1,</span>
                                 <span>Success Rate: 88%</span>
+                                {/* <textarea name="" id="" cols="30" rows="10">{ques.solution}</textarea> */}
                             </div>
                             <div className="item d-flex justify-content-between my-2">
                                 <p>This is an easy challenge to help you start coding in your<br/> favorite languages!</p>
-                                <button  className='btn btn-success m-3' onClick={tryagain} >Try Again </button>
+                                <Link  className='btn btn-success m-3'to={`/solutions/${ques._id}`}  >Try Again </Link>
                             </div>
                         </div>
                     </div>
+                      ))
+                    }
                 </div>
-                <div className="row my-3">
+                {/* <div className="row my-3">
                     <div className="card">
                         <div className="card-body">
                             <div className="item">
@@ -133,7 +158,7 @@ const Questions = () => {
                            
                         </div>
                     </div>
-                </div>
+                </div> */}
             </div>
             <div className="col my-3">
                 <div className="status">STATUS</div>

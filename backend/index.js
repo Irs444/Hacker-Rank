@@ -21,14 +21,14 @@ const AddSolutionRouter = require("./routers/addsolutionRouter")
  }));
 
  app.use("/user", UserRouter);
- app.use("/form",FormRouter);
- app.use("/solutions",SolutionRouter);
- app.use("/addsolution",AddSolutionRouter);
+ app.use("/form", FormRouter);
+ app.use("/solutions", SolutionRouter);
+ app.use("/addsolution", AddSolutionRouter);
 
 
  // code compiler 
 
- app.post("/run",async (req, res) => {
+ app.post("/run", async (req, res) => {
 const {language = "cpp", code} = req.body;
 
 if (code === undefined) {
@@ -39,10 +39,11 @@ if (code === undefined) {
    const filepath = await generateFile(language, code)
 
    // we need to run the file and responce
-   const  output = await executeCpp(filepath, output);
+   const  output = await executeCpp(filepath);
 
-    return req.json({filepath})
+    return req.json({filepath, output})
    } catch (err) {
+      console.log(err);
       res.status(500).json({err})
    }
  }),

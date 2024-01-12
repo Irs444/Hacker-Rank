@@ -34,8 +34,9 @@ const Solutions = () => {
         }
     }
 
+    
     const fetchPlanData = async () => {
-        const res = await fetch("http://localhost:5000/solution/getbyid/" +id );
+        const res = await fetch("http://localhost:5000/addsolution/getbyid/" +id );
         console.log(res.status);
 
         const data = await res.json();
@@ -60,6 +61,9 @@ const Solutions = () => {
                                 <div className="col-2" ></div>
                                 <div className="col-8">
                                    <div>
+                                    {
+                                        userData.solution
+                                    }
                                     <MDEditor.Markdown source={userData.content} style={{whiteSpace: "pre-wrap"}} />
                                    </div>
                                 </div>
@@ -75,9 +79,9 @@ const Solutions = () => {
                                         Language
                                     </label>
                                     <select name="" id="language" className="btn btn-outline-dark ms-2">
-                                        <option value="">English</option>
-                                        <option value="">Hindi</option>
-                                        <option value="">Marathi</option>
+                                        <option value="">C</option>
+                                        <option value="">C++</option>
+                                        <option value="">Java</option>
                                     </select>
                                 </div>
                                 <div className="card-body cont">

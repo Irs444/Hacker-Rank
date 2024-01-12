@@ -35,7 +35,7 @@ const Addsolution = () => {
                     title: 'Nice',
                     text: 'you have registered now'
                 })
-                navigate('/listquestion');
+                navigate('/questions');
             } else {
                 Swal.fire({
                     icon: 'erroe',
