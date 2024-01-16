@@ -14,6 +14,7 @@ const Addsolution = () => {
             solution: ''
         },
         onSubmit: async (values, { setSubmitting }) => {
+            values.solution = markdowmContent;
             setSubmitting(true);
             console.log(values);
 
@@ -49,17 +50,22 @@ const Addsolution = () => {
 
 
 
-    const [markdowmContent, setMarkdownContent] = useState("**Add Solutions**");
+    const [markdowmContent, setMarkdownContent] = useState();
 
     return (
         <div>
 
-            <div>
+            <div className='container'>
                 <MDEditor value={markdowmContent} onChange={(v) => setMarkdownContent(v)} />
+                
+               
             </div>
+           
+
             <form action="" onSubmit={solutionForm.handleSubmit}>
                 <label htmlFor="question" className='form-label'>Question</label>
-                <textarea type="text" id='solution' values={solutionForm.values.solution} onChange={solutionForm.handleChange} className='form-control w-25 mb-2' />
+               
+                <textarea type="text" id='solution' rows={10}  values={solutionForm.values.solution} onChange={solutionForm.handleChange} className='form-control w-50 mb-2' />
                 <button className='btn btn-primary' type='submit'>Submit</button>
             </form>
         </div>
