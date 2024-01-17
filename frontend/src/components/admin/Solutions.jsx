@@ -54,7 +54,7 @@ const Solutions = () => {
           if (data.jobId) {
             setJobId(data.jobId);
             setStatus("Submitted.");
-    
+            console.log(data.jobId);
             // poll here
             pollInterval = setInterval(async () => {
               const { data: statusRes } = await axios.get(
@@ -66,9 +66,10 @@ const Solutions = () => {
                 }
               );
               const { success, job, error } = statusRes;
-              console.log(statusRes);
+              console.log(job);
               if (success) {
                 const { status: jobStatus, output: jobOutput } = job;
+                console.log(jobStatus);
                 setStatus(jobStatus);
                 setJobDetails(job);
                 if (jobStatus === "pending") return;

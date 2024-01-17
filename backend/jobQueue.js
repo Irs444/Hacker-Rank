@@ -8,6 +8,7 @@ const jobQueue = new Queue("job-runner-queue");
 const NUM_WORKERS = 5;
 
 jobQueue.process(NUM_WORKERS, async ({ data }) => {
+  console.log('processing');
   const jobId = data.id;
   const job = await Job.findById(jobId);
   if (job === undefined) {
@@ -24,13 +25,14 @@ jobQueue.process(NUM_WORKERS, async ({ data }) => {
     job["completedAt"] = new Date();
     job["output"] = output;
     job["status"] = "success";
-    await job.save();
+    console.log(jobId);
+    await job.findByIdAndUpdate(jobId, job);
     return true;
   } catch (err) {
     job["completedAt"] = new Date();
     job["output"] = JSON.stringify(err);
     job["status"] = "error";
-    await job.save();
+    await job.findByIdAndUpdate(jobId, job);
     throw Error(JSON.stringify(err));
   }
 });
